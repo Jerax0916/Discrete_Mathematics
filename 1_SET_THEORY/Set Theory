@@ -1,0 +1,488 @@
+# 1.Proving Identities
+## Use Latex programming to show your solutions
+Given: $A$ and $B$ are sets, $\exists x$ such that $(x \in A \land x \in B)$.
+
+Show that:
+
+#### •A\B = A ∩ B∁
+
+
+
+To show that:
+
+\begin{align*}
+A \setminus B &= A \cap B^c
+\end{align*}
+
+Proof:
+
+For the first inclusion, assume $x \in A \setminus B$. This means $x \in A$ and $x \notin B$. Since $x \in A$ and $x$ is not in $B$, $x$ must be in $A \cap B^c$. So, the first inclusion is proved.
+
+For the second inclusion, assume $x \in A \cap B^c$. This means $x \in A$ and $x \notin B$. Since $x$ is not in $B$, $x \in A \setminus B$. So, the second inclusion is also proved.
+
+Therefore, $A \setminus B = A \cap B^c$.
+
+
+#### •B &= $(B \cap A) \cup (B \cap A^c)$
+To show that:
+
+\begin{align*}
+B &= (B \cap A) \cup (B \cap A^c)
+\end{align*}
+
+Proof:
+
+This can be proven using the distributive law of set theory.
+
+We know that $(B \cap A) \cup (B \cap A^c)$ is the union of two sets: one containing elements in both $B$ and $A$, and the other containing elements in both $B$ and $A^c$.
+
+Any element in $B$ is either in $A$ or in $A^c$. So, it covers all elements in $B$. Therefore, $B = (B \cap A) \cup (B \cap A^c)$.
+
+#### •B\\A = B $\cap$ $A^{c}$
+To show that:
+
+\begin{align*}
+B \setminus A &= B \cap A^c
+\end{align*}
+
+Proof:
+
+To prove this, we need to show that any element $x$ in $B \setminus A$ is also in $B \cap A^c$, and vice versa.
+
+If $x \in B \setminus A$, then $x \in B$ and $x \notin A$. This means that $x$ is in $B$ ($B$) and not in $A$ ($A^c$), so $x \in B \cap A^c$.
+
+If $x \in B \cap A^c$, then $x \in B$ and $x \notin A$. This means that $x$ is in $B$ ($B$) and not in $A$ ($A^c$), so $x \in B \setminus A$.
+
+Therefore, $B \setminus A = B \cap A^c$.
+
+#### •A $\cup$ B = A $\cup$ (B $\cap$ $A^{c}$)
+To show that:
+
+\begin{align*}
+A \cup B &= A \cup (B \cap A^c)
+\end{align*}
+
+Proof:
+
+This can be proven using the distributive law of set theory.
+
+We know that $A \cup (B \cap A^c)$ is the union of two sets: one containing elements in both $A$ and $B$, and the other containing elements in $B$ that are not in $A$.
+
+Any element in $A \cup B$ is either in $A$ or in $B$. So, it covers all elements in $A \cup B$. Therefore, $A \cup B = A \cup (B \cap A^c)$.
+
+#### •$(\textbf{U}_{i=1}^{\infty} A_{i}^{c})^{c}$ = $\cap_{i=1}^{\infty}A_{i}$
+
+To show that:
+
+\begin{align*}
+\left(\bigcup_{i=1}^{\infty} A_i^c\right)^c &= \bigcap_{i=1}^{\infty} A_i
+\end{align*}
+
+Proof:
+
+Let $x$ be an element in $\left(\bigcup_{i=1}^{\infty} A_i^c\right)^c$. This means $x$ is not in the complement of the union of $A_i^c$ for all $i$, which implies that $x$ is in at least one of the $A_i$ (since $A_i = (A_i^c)^c$). Therefore, $x$ is in the intersection of all $A_i$.
+
+Now, let $x$ be an element in $\bigcap_{i=1}^{\infty} A_i$. This means $x$ is in every $A_i$, and hence, it is not in the complement of any $A_i$, i.e., $x$ is not in $\bigcup_{i=1}^{\infty} A_i^c$. Therefore, $x$ is in the complement of the union of $A_i^c$, and thus, $x$ is in $\left(\bigcup_{i=1}^{\infty} A_i^c\right)^c$.
+
+Therefore, $(\textbf{U}_{i=1}^{\infty} A_{i}^{c})^{c}$ = $\cap_{i=1}^{\infty}A_{i}$
+
+#### •$|A \cup B| = |A| + |B| - |A \cap B|$
+To show that:
+
+\begin{align*}
+|A \cup B| &= |A| + |B| - |A \cap B|
+\end{align*}
+
+Proof:
+
+We can prove this using the principle of Inclusion-Exclusion.
+
+The principle of Inclusion-Exclusion states that for two sets $A$ and $B$:
+
+\begin{align*}
+|A \cup B| &= |A| + |B| - |A \cap B|
+\end{align*}
+
+This principle can be extended to more than two sets as follows:
+
+\begin{align*}
+|A_1 \cup A_2 \cup \ldots \cup A_n| &= \sum_{k=1}^{n} |A_k| - \sum_{1 \leq i < j \leq n} |A_i \cap A_j| + \sum_{1 \leq i < j < k \leq n} |A_i \cap A_j \cap A_k| - \ldots + (-1)^{n-1} |A_1 \cap A_2 \cap \ldots \cap A_n|
+\end{align*}
+
+In our case, with two sets $A$ and $B$, we get:
+
+\begin{align*}
+|A \cup B| &= |A| + |B| - |A \cap B|
+\end{align*}
+
+So, $|A \cup B| = |A| + true |B| - |A \cap B|$ is proven.
+
+
+# 2.Sets and Subsets
+### Use Latex Programming to show your solutions
+## •If A = \{2, 3, 4, 5\}, and B = \{ x ∈ ℕ | x is even }.
+
+## Is \(A \subset B\)? Show a proof.
+
+\documentclass{article}
+\usepackage{amssymb}
+
+\begin{documentWe need to show that every element in $A$ is also in $B$.
+
+$$ A = \{2, 3, 4, 5\} $$
+
+$$ B = \{x \in \mathbb{N} \mid x \text{ is even}\} = \{2, 4, 6, 8, \ldots\} $$
+
+
+
+"{2,3,4,5} $\\subset$ {2,4,6,8,10...} = ${False}$"
+
+Since every element in $A$ is also in $B$, we can conclude that $A \subseteq B$.
+u
+
+# Proof 2
+We want to find a set $X$ that satisfies the following conditions:
+
+1. $X$ and $B$ are disjoint: $X \cap B = \emptyset$.
+2. $X$ is a subset of $D$ but not a subset of $B$: $X \subseteq D$ and $X \not\subseteq B$.
+3. $X$ is a subset of $A$ but not a subset of $C$: $X \subseteq A$ and $X \not\subseteq C$.
+
+Let's construct $X$ based on these conditions:
+
+1. To ensure $X$ and $B$ are disjoint, we can select elements from $A$ that are not in $B$. So, $X = \{3, 5\}$.
+
+$$ X = \{3, 5\} $$
+
+2. $X$ is a subset of $D$ but not a subset of $B$. Since $X = \{3, 5\}$ and $D = \{3, 4, 5\}$, it satisfies this condition.
+
+$$ X \subseteq D \quad \text{and} \quad X \not\subseteq B $$
+
+3. $X$ is a subset of $A$ but not a subset of $C$. Since $X = \{3, 5\}$ and $A = \{2, 3, 4, 5\}$, it satisfies this condition.
+
+$$ X \subseteq A \quad \text{and} \quad X \not\subseteq C $$
+
+
+# 3.Set Operations
+
+1. First solve the problems manually, use LaTeX programming to show your manual solutions.
+
+2. Second, solve the problem using Python. Show your codes for the Pythonic solutions.
+
+#### Given Sets
+
+- \( U = \{1, 2, 3, 4, 5\} \)
+- \( A = \{1, 2, 3, 4, 5\} \)
+- \( B = \{4, 5, 6, 7\} \)
+- \( C = \{5, 6, 7, 8, 9\} \)
+- \( D = \{1, 3, 5, 7, 9\} \)
+- \( E = \{2, 4, 6, 8\} \)
+- \( F = \{1, 5, 9\} \)
+
+#### Problems
+
+1. \( C ⊕ D \)
+2. \( A $\setminus$ B \)
+3. \( B $\setminus$ A \)
+4. \( E ⊕ F \)
+
+##  First solve the problems manually, use LaTeX programming to show your manual solutions.
+
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+Given:
+
+ U = {1,2,3,4,5}
+ 
+ A = {1,2,3,4,5}
+ 
+ B = {4,5,6,7}
+ 
+ C = {5,6,7,8,9}
+ 
+ D = {1,3,5,7,9}
+ 
+ E = {2,4,6,8}
+ 
+ F = {1,5,9}
+ 
+ \vspace{1 cm}
+ 
+ Solution:
+
+1. C $\oplus$ D (Symmetric Difference)
+ 
+ Let C and D be sets. The set Symmetric Difference of set C and D is
+ 
+ C $\oplus$ D = (C $\setminus$ D) $\cup$ (C $\setminus$ D)
+ 
+ If C = {5,6,7,8,9} and D = \{1,3,5,7,9\}
+ 
+ Then C $\setminus$ D = {6,8}   and D $\setminus$ C = {1,3,}
+ 
+ C $\oplus$ D = \{1,3,6,8\}
+\vspace{1 cm}
+
+ 2. A$\setminus$B (Set Difference)
+
+ Let A and B be sets. The set difference of A and B is 
+
+$\lvert$ A-B$\rvert$ = $\lvert$A$\rvert$ - $\lvert$A$\cap$B$\rvert$
+
+If A = \{1,2,3,4,5\}
+
+And B = \{4,5,6,7\}
+
+Then A$\setminus$B = \{1,2,3\}
+\vspace{1 cm}
+
+3. B$\setminus$A (Set Difference)
+
+ Let B and A be sets. The set difference of B and A is 
+
+$\lvert$ B-A$\rvert$ = $\lvert$B$\rvert$ - $\lvert$B$\cap$A$\rvert$
+
+ If B = \{4,5,6,7\}
+ 
+ And A = \{1,2,3,4,5\}
+ 
+ Then B$\setminus$A = \{6,7\}
+ \vspace{1cm}
+
+ 4.E $\oplus$ F  (Symmetric Difference)
+ Let E and F be sets. The set Symmetric Difference of set E and F is
+
+  E $\oplus$ F = (E $\setminus$ F) $\cup$ (E $\setminus$ F)
+ 
+ 
+\end{document
+
+##  Second, solve the problem using python. Show your codes for the pythonic solutions.
+
+# Given Sets
+U = {1, 2, 3, 4, 5}
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7}
+C = {5, 6, 7, 8, 9}
+D = {1, 3, 5, 7, 9}
+E = {2, 4, 6, 8}
+F = {1, 5, 9}
+
+# Problem 1: C ⊕ D (Symmetric Difference)
+problem_1_solution = C.symmetric_difference(D)  # Elements in C ⊕ D
+
+# Problem 2: A \ B (Set Difference)
+problem_2_solution = A - B  # Elements in A but not in B
+
+# Problem 3: B \ A (Set Difference)
+problem_3_solution = B - A  # Elements in B but not in A
+
+# Problem 4: E ⊕ F (Symmetric Difference)
+problem_4_solution = E.symmetric_difference(F)  # Elements in E ⊕ F
+
+# Print solutions for each problem
+print("Problem 1 Solution:", problem_1_solution)  # Output: {6, 8, 1, 3}
+print("Problem 2 Solution:", problem_2_solution)  # Output: {1, 2, 3}
+print("Problem 3 Solution:", problem_3_solution)  # Output: {6, 7}
+print("Problem 4 Solution:", problem_4_solution)  # Output: {1, 2, 4, 5, 6, 8, 9}
+
+
+
+
+# 4. Finite Sets and The Counting Principles
+
+# Venn Diagram and Set Analysis
+
+In a survey of 120 people, it was found that:
+
+- 65 read Newsweek Magazine
+- 45 read Times Magazine
+- 42 read Fortune Magazine
+- 20 read Both Newsweek and Time
+- 25 read both Newsweek and Fortune
+- 15 read both Time and Fortune
+- 8 read all three magazines
+
+
+## Analysis
+
+- The number of people who read at least one of the three magazines is calculated to be {{ n_at_least_one }}.
+- The number of people who read exactly one magazine is calculated to be {{ n_exactly_one }}.
+
+
+import matplotlib.pyplot as plt
+from matplotlib_venn import venn3
+
+# Given information
+total_people = 120
+newsweek = 65
+times = 45
+fortune = 42
+newsweek_and_times = 20
+newsweek_and_fortune = 25
+times_and_fortune = 15
+all_three = 8
+
+# Calculate the number of people who read exactly one magazine
+exactly_one_magazine = (newsweek - newsweek_and_times - newsweek_and_fortune + all_three) + \
+                       (times - newsweek_and_times - times_and_fortune + all_three) + \
+                       (fortune - newsweek_and_fortune - times_and_fortune + all_three)
+
+# Calculate the number of people who read at least one of the three magazines
+at_least_one_magazine = newsweek + times + fortune - \
+                        (newsweek_and_times + newsweek_and_fortune + times_and_fortune) + \
+                        2 * all_three
+
+# Draw the Venn diagram
+venn = venn3(subsets=(newsweek - newsweek_and_times - newsweek_and_fortune + all_three,
+                      times - newsweek_and_times - times_and_fortune + all_three,
+                      newsweek_and_times - all_three,
+                      fortune - newsweek_and_fortune - times_and_fortune + all_three,
+                      newsweek_and_fortune - all_three,
+                      times_and_fortune - all_three,
+                      all_three),
+             set_labels=('Newsweek', 'Times', 'Fortune'))
+
+# Display the diagram
+plt.title("Draw the Venn Diagram using python")
+plt.show()
+
+# Print the results
+print("2.Number of people who read at least one magazine:", at_least_one_magazine)
+print("3.Number of people who read exactly one magazine:", exactly_one_magazine)
+
+
+# Venn Diagram and Set Analysis
+
+In a survey of 25 new cars being sold at a local auto dealer, it was found that:
+
+- 15 had air-conditioning (A)
+- 12 had a radio (R)
+- 11 had power windows (W)
+- 5 had both air-conditioning and power windows
+- 9 had both air-conditioning and a radio
+- 4 had both a radio and power windows
+- Only 3 had all three options
+
+## Venn Diagram
+Here is the Venn diagram illustrating the number of cars with different options:
+
+![Venn Diagram](venn_diagram.png)
+
+## Analysis
+
+- The number of cars with only power windows (W) is calculated to be {{ n_w_only }}.
+- The number of cars with only air-conditioning (A) is calculated to be {{ n_a_only }}.
+- The number of cars with only a radio (R) is calculated to be {{ n_r_only }}.
+- The number of cars with both radio and power windows but not air-conditioning is calculated to be {{ n_r_w_not_a }}.
+- The number of cars with both air-conditioning and a radio but not power windows is calculated to be {{ n_a_r_not_w }}.
+- The number of cars with only one of the options is calculated to be {{ n_one_option }}.
+- The number of cars with at least one option is calculated to be {{ n_at_least_one }}.
+- The number of cars with none of the options is calculated to be {{ n_none_option }}.
+
+
+from matplotlib_venn import venn3
+import matplotlib.pyplot as plt
+
+# Given data
+total_cars = 25
+cars_with_a = 15
+cars_with_r = 12
+cars_with_w = 11
+cars_with_a_and_w = 5
+cars_with_a_and_r = 9
+cars_with_r_and_w = 4
+cars_with_all_options = 3
+
+# Calculations
+cars_with_a_only = cars_with_a - cars_with_a_and_r - cars_with_a_and_w + cars_with_all_options
+cars_with_r_only = cars_with_r - cars_with_a_and_r - cars_with_r_and_w + cars_with_all_options
+cars_with_w_only = cars_with_w - cars_with_a_and_w - cars_with_r_and_w + cars_with_all_options
+cars_with_r_and_w_but_not_a = cars_with_r_and_w - cars_with_all_options
+cars_with_a_and_r_but_not_w = cars_with_a_and_r - cars_with_all_options
+cars_with_one_option = cars_with_a_only + cars_with_r_only + cars_with_w_only
+cars_with_at_least_one_option = (
+    cars_with_a + cars_with_r + cars_with_w
+    - cars_with_a_and_r - cars_with_a_and_w - cars_with_r_and_w
+    + cars_with_all_options
+)
+cars_with_none_options = total_cars - cars_with_at_least_one_option
+
+# Venn Diagram
+venn_labels = {
+    "100": cars_with_a_only,
+    "010": cars_with_r_only,
+    "001": cars_with_w_only,
+    "110": cars_with_a_and_r_but_not_w,
+    "101": cars_with_r_and_w_but_not_a,
+    "011": cars_with_r_and_w_but_not_a,
+    "111": cars_with_all_options
+}
+
+venn = venn3(subsets=venn_labels, set_labels=('A', 'R', 'W'))
+plt.title("Venn Diagram of Car Options")
+plt.show()
+
+# Print results
+print("Number of cars with W only:", cars_with_w_only)
+print("Number of cars with A only:", cars_with_a_only)
+print("Number of cars with R only:", cars_with_r_only)
+print("Number of cars with both R and W but not A:", cars_with_r_and_w_but_not_a)
+print("Number of cars with both A and R but not W:", cars_with_a_and_r_but_not_w)
+print("Number of cars with only one of the options:", cars_with_one_option)
+print("Number of cars with at least one option:", cars_with_at_least_one_option)
+print("Number of cars with none of the Options:", cars_with_none_options)
+
+from matplotlib_venn import venn3
+import matplotlib.pyplot as plt
+
+# Given data
+total_cars = 25
+cars_with_a = 15
+cars_with_r = 12
+cars_with_w = 11
+cars_with_a_and_w = 5
+cars_with_a_and_r = 9
+cars_with_r_and_w = 4
+cars_with_all_options = 3
+
+# Calculations
+cars_with_a_only = cars_with_a - cars_with_a_and_r - cars_with_a_and_w + cars_with_all_options
+cars_with_r_only = cars_with_r - cars_with_a_and_r - cars_with_r_and_w + cars_with_all_options
+cars_with_w_only = cars_with_w - cars_with_a_and_w - cars_with_r_and_w + cars_with_all_options
+cars_with_r_and_w_but_not_a = cars_with_r_and_w - cars_with_all_options
+cars_with_a_and_r_but_not_w = cars_with_a_and_r - cars_with_all_options
+cars_with_one_option = cars_with_a_only + cars_with_r_only + cars_with_w_only
+cars_with_at_least_one_option = (
+    cars_with_a + cars_with_r + cars_with_w
+    - cars_with_a_and_r - cars_with_a_and_w - cars_with_r_and_w
+    + cars_with_all_options
+)
+cars_with_none_options = total_cars - cars_with_at_least_one_option
+
+# Venn Diagram
+venn_labels = {
+    "100": cars_with_a_only,
+    "010": cars_with_r_only,
+    "001": cars_with_w_only,
+    "110": cars_with_a_and_r_but_not_w,
+    "101": cars_with_r_and_w_but_not_a,
+    "011": cars_with_r_and_w_but_not_a,
+    "111": cars_with_all_options
+}
+
+venn = venn3(subsets=venn_labels, set_labels=('A', 'R', 'W'))
+plt.title("Venn Diagram of Car Options")
+plt.show()
+
+# Print results
+print("Number of cars with W only:", cars_with_w_only)
+print("Number of cars with A only:", cars_with_a_only)
+print("Number of cars with R only:", cars_with_r_only)
+print("Number of cars with both R and W but not A:", cars_with_r_and_w_but_not_a)
+print("Number of cars with both A and R but not W:", cars_with_a_and_r_but_not_w)
+print("Number of cars with only one of the options:", cars_with_one_option)
+print("Number of cars with at least one option:", cars_with_at_least_one_option)
+print("Number of cars with none of the Options:", cars_with_none_options)
+
